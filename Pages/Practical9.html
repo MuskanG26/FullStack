@@ -1,0 +1,1005 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Assignment-9</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .nav {
+            list-style: none;
+            float: right;
+            padding: 0 20px;
+        }
+
+        .nav li {
+            line-height: 70px;
+            display: inline-block;
+        }
+
+        .nav li a {
+            transition: 0.4s;
+            display: block;
+            text-decoration: none;
+            color: white;
+            padding: 0px 20px;
+            font-size: 20px;
+            text-transform: uppercase;
+        }
+
+        .nav li a:hover {
+            color: black;
+            background-color: white;
+        }
+
+        html {
+            scroll-padding-top: 70px;
+            scroll-behavior: smooth;
+
+        }
+
+        #container {
+            width: 100%;
+            margin: auto;
+            max-width: 1200px;
+        }
+
+        .show-btn,
+        .hide-btn,
+        #chk {
+            font-size: 30px;
+            line-height: 70px;
+            color: white;
+            display: none;
+            float: right;
+            padding-right: 20px;
+        }
+
+        #head {
+            width: 100%;
+            max-width: 1200px;
+            background-color: rgb(104, 109, 110);
+            height: 70px;
+            top: 0;
+            position: fixed;
+
+        }
+
+        #ban {
+            width: 100%;
+            height: 680px;
+            margin-top: 90px;
+            margin-bottom: 15px;
+            font-size: 40px;
+            display: flex;
+            color: white;
+        }
+
+        #ban {
+            background-image: url(../Images/WhatsApp\ Image\ 2021-09-04\ at\ 16.44.19.jpeg);
+            background-size: cover;
+            background-position: center;
+        }
+
+        #ban h2 {
+            margin: 20px 20px;
+            color: #fff;
+        }
+
+        #Section1 {
+            width: 100%;
+            margin: 15px auto;
+        }
+
+        #Section1::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+        .circle img {
+            background-color: rgb(238, 146, 9);
+            border-radius: 50%;
+            height: 250px;
+            width: 250px;
+            display: flex;
+            float: left;
+            margin-left: 40px;
+            justify-content: center;
+            align-items: center;
+            font-size: 30px;
+        }
+
+        #Section2::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+        #main {
+            background-color: gray;
+            height: 550px;
+            width: 50%;
+            margin-bottom: 10px;
+            float: left;
+            color: white;
+        }
+
+        #main-p>h2 {
+            text-align: left;
+            margin: 10px 5px;
+        }
+
+        #main-p>p {
+            font-size: 20px;
+            padding: 10px;
+            text-align: justify;
+            line-height: 28px;
+        }
+
+        #Article {
+
+            width: 48%;
+            height: 550px;
+            float: right;
+        }
+
+        .art {
+            background-color: rgb(196, 74, 26);
+            justify-content: center;
+            display: flex;
+            margin-bottom: 20px;
+            font-size: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+            height: 31%;
+            color: black;
+            overflow: hidden;
+        }
+
+        #p1 {
+                    background-image: url(../Images/tech1.jpg);
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                }
+
+                #p2 {
+                    background-image: url(../Images/tech2.png);
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                }
+
+                #p3 {
+                    background-image: url(../Images/tech3.jpg);
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                }
+
+        #Section3 {
+            width: 100%;
+            margin: 15px auto;
+        }
+
+        #Section3::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+        .rec {
+            width: 20%;
+            float: left;
+            margin-left: 50px;
+            background-color: lightgrey;
+            border-radius: 8px;
+            box-shadow: 0 5px 5px rgba(0, 0, 0, 0.15);
+        }
+
+        .rec>img {
+            width: 100%;
+            margin-bottom: 10px;
+            padding: 10px;
+        }
+
+        .rec>h4 {
+            margin: 0px 10px;
+            text-align: center;
+        }
+
+        .rec>p {
+            margin: 10px;
+            font-size: 15px;
+            text-align: justify;
+            line-height: 25px;
+            color: white;
+        }
+
+        .rec>a {
+            display: block;
+            margin: 0 auto;
+            text-align: center;
+            color: #fff;
+            background-color: red;
+            text-decoration: none;
+            padding: 10px;
+            border-radius: 8px;
+        }
+
+        h1 {
+            color: black;
+            font-size: 40px;
+            text-align: center;
+            padding: 25px 0px;
+        }
+
+        .rec>a:hover {
+            background-color: blue;
+        }
+
+        #foot {
+            background-color: rgb(211, 102, 169);
+            height: 100px;
+        }
+
+        #foot>p {
+            font-size: 16px;
+            color: black;
+            text-align: center;
+            padding: 20px;
+        }
+
+        @media (min-width:801px) and (max-width:1199px) {
+            .nav {
+                list-style: none;
+                float: right;
+            }
+
+            .nav li {
+                line-height: 70px;
+                display: inline-block;
+            }
+
+            .nav li a {
+                display: block;
+                text-decoration: none;
+                color: white;
+                padding: 0px 20px;
+                font-size: 20px;
+                text-transform: uppercase;
+            }
+
+            .nav li a:hover {
+                color: black;
+                background-color: white;
+            }
+
+            html {
+                scroll-padding-top: 70px;
+                scroll-behavior: smooth;
+
+            }
+
+            #container {
+                width: 100%;
+            }
+
+            .show-btn,
+            .hide-btn,
+            #chk {
+                font-size: 30px;
+                line-height: 70px;
+                color: white;
+                display: none;
+                float: right;
+                padding-right: 20px;
+            }
+
+            #head {
+                width: 100%;
+                background-color: rgb(104, 109, 110);
+                height: 70px;
+                top: 0;
+                position: fixed;
+
+            }
+
+            #ban {
+                width: 100%;
+                height: 680px;
+                margin-top: 90px;
+                margin-bottom: 15px;
+                font-size: 40px;
+                display: flex;
+                color: white;
+            }
+
+            #ban {
+                background-image: url(../Images/WhatsApp\ Image\ 2021-09-04\ at\ 16.44.19.jpeg);
+                background-size: cover;
+                background-position: center;
+            }
+
+            #ban h2 {
+                margin: 20px 20px;
+                color: #fff;
+            }
+
+            #Section1 {
+                width: 100%;
+            }
+
+            #Section1::after {
+                content: '';
+                display: block;
+                clear: both;
+            }
+
+            .circle img {
+                background-color: rgb(238, 146, 9);
+                border-radius: 50%;
+                height: 250px;
+                width: 250px;
+                margin-bottom: 20px;
+                float: left;
+                margin-left: 15%;
+            }
+
+            #Section2::after {
+                content: '';
+                display: block;
+                clear: both;
+            }
+
+            #main {
+                background-color: gray;
+                height: 550px;
+                width: 50%;
+                margin-bottom: 10px;
+                float: left;
+                color: white;
+            }
+
+            #main-p>h2 {
+                text-align: left;
+                margin: 10px 5px;
+            }
+
+            #main-p>p {
+                font-size: 20px;
+                padding: 10px;
+                text-align: justify;
+                line-height: 28px;
+            }
+
+            #Article {
+
+                width: 48%;
+                height: 550px;
+                float: right;
+            }
+
+            .art {
+                background-color: rgb(196, 74, 26);
+                justify-content: center;
+                display: flex;
+                margin-bottom: 20px;
+                font-size: 20px;
+                font-family: Arial, Helvetica, sans-serif;
+                height: 31%;
+                color: black;
+                overflow: hidden;
+            }
+
+               #p1 {
+                    background-image: url(../Images/tech1.jpg);
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                }
+
+                #p2 {
+                    background-image: url(../Images/tech2.png);
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                }
+
+                #p3 {
+                    background-image: url(../Images/tech3.jpg);
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                }
+
+            #Section3 {
+                width: 100%;
+                margin: 15px auto;
+            }
+
+            #Section3::after {
+                content: '';
+                display: block;
+                clear: both;
+            }
+
+            .rec {
+                width: 40%;
+                float: left;
+                margin-left: 65px;
+                margin-bottom: 20px;
+                background-color: lightgrey;
+                border-radius: 8px;
+                box-shadow: 0 5px 5px rgba(0, 0, 0, 0.15);
+            }
+
+            .rec>img {
+                width: 100%;
+                margin-bottom: 10px;
+                padding: 20px;
+            }
+
+            .rec>h4 {
+                margin: 0px 10px;
+                text-align: center;
+            }
+
+            .rec>p {
+                margin: 10px;
+                font-size: 20px;
+                text-align: justify;
+                line-height: 30px;
+                color: white;
+            }
+
+            .rec>a {
+                display: block;
+                margin: 0 auto;
+                text-align: center;
+                color: #fff;
+                background-color: red;
+                text-decoration: none;
+                padding: 10px;
+                border-radius: 8px;
+            }
+
+            h1 {
+                color: black;
+                font-size: 40px;
+                text-align: center;
+                padding: 25px 0px;
+            }
+
+            .rec>a:hover {
+                background-color: blue;
+            }
+
+            #foot {
+                background-color: rgb(211, 102, 169);
+                height: 100px;
+            }
+
+            #foot>p {
+                font-size: 16px;
+                color: black;
+                text-align: center;
+                padding: 20px;
+            }
+        }
+
+        @media (max-width: 800px) {
+            .nav {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 100%;
+                background-color: #333;
+                text-align: center;
+                padding: 80px 0px;
+                line-height: normal;
+                transition: 0.7s;
+            }
+
+            .nav li {
+                display: block;
+            }
+
+            .nav li a {
+                display: block;
+            }
+
+            .show-btn {
+                display: block;
+            }
+
+            #chk:checked~.menu {
+                right: 0;
+            }
+
+            .hide-btn {
+                display: block;
+                position: absolute;
+                right: 20px;
+                top: 10px;
+            }
+
+            #head {
+                width: 100%;
+                background-color: rgb(104, 109, 110);
+                height: 70px;
+                top: 0;
+                position: fixed;
+
+            }
+
+            #ban {
+                width: 100%;
+                height: 350px;
+                margin-top: 90px;
+                margin-bottom: 15px;
+                font-size: 30px;
+                display: flex;
+                color: white;
+            }
+
+
+            #ban h2 {
+                margin: 10px 20px;
+                color: #fff;
+            }
+
+            #Section1 {
+                width: 100%;
+            }
+
+            #Section1::after {
+                content: '';
+                display: block;
+                clear: both;
+            }
+
+            .circle img {
+                border-radius: 50%;
+                height: 250px;
+                width: 250px;
+                margin-bottom: 20px;
+                float: left;
+                margin-left: 10%;
+            }
+
+            #main {
+                background-color: gray;
+                height: 200px;
+                width: 100%;
+                margin-bottom: 20px;
+                color: white;
+            }
+
+            #main-p>h2 {
+                text-align: left;
+                margin: 5px 5px;
+            }
+
+            #main-p>p {
+                font-size: 20px;
+                padding: 10px;
+                text-align: justify;
+                line-height: 28px;
+            }
+
+            #Article {
+
+                width: 100%;
+                height: 400px;
+            }
+
+            .art {
+                background-color: rgb(196, 74, 26);
+                justify-content: center;
+                display: flex;
+                margin-bottom: 20px;
+                font-size: 16px;
+                font-family: Arial, Helvetica, sans-serif;
+                height: 31%;
+                color: black;
+                overflow: hidden;
+            }
+
+                 #p1 {
+                    background-image: url(../Images/tech1.jpg);
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                }
+
+                #p2 {
+                    background-image: url(../Images/tech2.png);
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                }
+
+                #p3 {
+                    background-image: url(../Images/tech3.jpg);
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                }
+            #Section3 {
+                width: 100%;
+                margin: 15px auto;
+            }
+
+            #Section3::after {
+                content: '';
+                display: block;
+                clear: both;
+            }
+
+            .rec {
+                width: 40%;
+                float: left;
+                margin-left: 50px;
+                margin-bottom: 20px;
+                background-color: lightgrey;
+                border-radius: 8px;
+                box-shadow: 0 5px 5px rgba(0, 0, 0, 0.15);
+            }
+
+            .rec>img {
+                width: 100%;
+                margin-bottom: 10px;
+            }
+
+            .rec>h4 {
+                margin: 0px 10px;
+                text-align: center;
+            }
+
+            .rec>p {
+                margin: 10px;
+                font-size: 15px;
+                text-align: justify;
+                line-height: 25px;
+                color: white;
+            }
+
+            .rec>a {
+                display: block;
+                margin: 0 auto;
+                text-align: center;
+                color: #fff;
+                background-color: red;
+                text-decoration: none;
+                padding: 10px;
+                border-radius: 8px;
+            }
+
+            h1 {
+                color: black;
+                font-size: 40px;
+                text-align: center;
+                padding: 25px 0px;
+            }
+
+            @media (max-width: 625px) {
+                .menu {
+                    position: fixed;
+                    top: 0;
+                    right: -100%;
+                    width: 100%;
+                    background-color: #333;
+                    text-align: center;
+                    padding: 80px 0px;
+                    line-height: normal;
+                    transition: 0.7s;
+                }
+
+                .menu li {
+                    display: block;
+                }
+
+                .menu li a {
+                    display: block;
+                }
+
+                .menu li a:hover {
+                    color: black;
+                    background-color: white;
+                }
+
+                #container {
+                    min-width: 320px;
+                }
+
+                .show-btn {
+                    display: block;
+                }
+
+                .hide-btn {
+                    display: block;
+                    position: absolute;
+                    right: 20px;
+                    top: 10px;
+                }
+
+                #chk:checked~.nav {
+                    right: 0;
+                }
+
+                #ban {
+                    width: 100%;
+                    height: 250px;
+                    margin-top: 90px;
+                    margin-bottom: 15px;
+                    color: white;
+                }
+
+                #ban h2 {
+                    margin: 10px 20px;
+                    color: #fff;
+                    font-size: 20px;
+                }
+
+                #Section1 {
+                    width: 90%;
+                    margin-left: 10%;
+                }
+
+                .circle img {
+                    border-radius: 50%;
+                    height: 70%;
+                    width: 70%;
+                    margin-bottom: 20px;
+                }
+
+                #main {
+                    background-color: gray;
+                    height: 200px;
+                    width: 100%;
+                    margin-bottom: 20px;
+                    color: white;
+                }
+
+                #main-p>h2 {
+                    text-align: left;
+                    margin: 5px 5px;
+                }
+
+                #main-p>p {
+                    font-size: 20px;
+                    padding: 10px;
+                    text-align: justify;
+                    line-height: 28px;
+                }
+
+                #Article {
+
+                    width: 100%;
+                    height: 400px;
+                }
+
+                .art {
+                    box-sizing: border-box;
+                    justify-content: center;
+                    display: flex;
+                    margin-bottom: 20px;
+                    font-size: 16px;
+                    font-family: Arial, Helvetica, sans-serif;
+                    height: 31%;
+                    color: black;
+                    overflow: hidden;
+                }
+
+                    #p1 {
+                    background-image: url(../Images/tech1.jpg);
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                }
+
+                #p2 {
+                    background-image: url(../Images/tech2.png);
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                }
+
+                #p3 {
+                    background-image: url(../Images/tech3.jpg);
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                }
+
+                #Section3 {
+                    width: 100%;
+                    box-sizing: border-box;
+                }
+
+                .rec {
+                    width: 90%;
+                    float: left;
+                    margin-left: 20px;
+                    margin-bottom: 20px;
+                    background-color: lightgrey;
+                    border-radius: 8px;
+                    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.15);
+                    max-height: 500px;
+                }
+
+                .rec>img {
+                    width: 100%;
+                    margin-bottom: 10px;
+                    padding: 20px;
+                }
+
+                .rec>h4 {
+                    margin: 0px 10px;
+                    text-align: center;
+                }
+
+                .rec>p {
+                    margin: 10px;
+                    font-size: 15px;
+                    text-align: justify;
+                    line-height: 25px;
+                    color: white;
+                }
+
+                .rec>a {
+                    display: block;
+                    margin: 0 auto;
+                    text-align: center;
+                    color: #fff;
+                    background-color: red;
+                    text-decoration: none;
+                    padding: 10px;
+                    border-radius: 8px;
+                }
+
+                h1 {
+                    color: black;
+                    font-size: 20px;
+                    text-align: center;
+                    padding-top: 25px;
+                    padding-bottom: 15px;
+                }
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <div id="head">
+            <input type="checkbox" id="chk" />
+            <label for="chk" class="show-btn">
+                <i class="fa fa-bars"></i>
+            </label>
+            <ul class="nav">
+
+                    <li><a href="#top">HOME</a></li>
+
+                    <li><a href="#about">ABOUT US</a></li>
+
+                    <li><a href="#Section1">TEAM</a></li>
+
+                    <li><a href="#Technologies">TECHNOLOGIES</a></li>
+
+                    <li><a href="#contact">CONTACT</a></li>
+
+                <label for="chk" class="hide-btn">
+                    <i class="fa fa-times"></i>
+                </label>
+            </ul>
+        </div>
+
+        <a name="top"></a>
+        <div id="ban">
+            <h2>PRACTICAL-9</h2>
+        </div>
+
+        <div id="Section1">
+            <h1>Team Members</h1>
+            <div class="circle">
+                <img src="../Images/user1.jpg" alt="" />
+            </div>
+            <div class="circle">
+                <img src="../Images/user3.jpg" alt="" />
+            </div>
+            <div class="circle">
+                <img src="../Images/user1.jpg" alt="" />
+            </div>
+            <div class="circle">
+                <img src="../Images/user3.jpg" alt="" />
+            </div>
+        </div>
+        <div id="Section2">
+            <a name="about"></a>
+            <h1>About Us</h1>
+            <div id="main">
+                <div id="main-p">
+                    <h2>About Projects</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing
+                        elit. Explicabo veniam, at, maiores unde quam doloremque
+                        molestias sint mollitia dolor, asperiores corrupti
+                        nobis exercitationem quas? Fuga consequuntur nemo adipisci
+                        voluptas sit vel, temporibus voluptatibus eum alias
+                        eveniet beatae excepturi inventore consectetur asperiores
+                        a nesciunt rem aliquid quam quas vitae voluptatem cum,
+                        nisi repellat. Quae velit rerum, modi autem, vero quis
+                        asperiores aperiam dolores dignissimos non, iste maiores.
+                        Harum veniam ratione mollitia dolorum, est ullam
+                        blanditiis omnis exercitationem minus, excepturi saepe,
+                        non corrupti! Ratione dolores dolore a et tenetur porro.
+                        Ut iusto a optio, provident minima autem. Animi iure omnis
+                        totam tempora!
+                    </p>
+                </div>
+            </div>
+            <div id="Article">
+                <div class="art" id="p1">
+                    <h2>Project-1</h2>
+                </div>
+                <div class="art" id="p2">
+                    <h2>Project-2</h2>
+                </div>
+                <div class="art" id="p3">
+                    <h2>Project-3</h2>
+                </div>
+            </div>
+        </div>
+        <div id="Section3">
+            <a name="Technologies"></a>
+            <h1>Technologies Used</h1>
+            <div class="rec">
+                <img src="../Images/html.jpeg" alt="" />
+                <h4>Introduction to HTML</h4>
+                <p>
+                    HTML stands for Hypertext Markup Language, and it is the most widely used language to write Web Pages.
+                </p>
+
+                <a href="./Practical5-html.html">Read More</a>
+            </div>
+            <div class="rec">
+                <img src="../Images/css-3-logo.jpeg" alt="" />
+                <h4>Introduction to CSS</h4>
+                <p>
+                    CSS is short for Cascading Style Sheets, and is the preferred way for setting the look and feel of a website.
+                </p>
+
+                <a href="./Practical5-css.html">Read More</a>
+            </div>
+            <div class="rec">
+
+                <img src="../Images/js.jpeg" alt="" />
+                <h4>Introduction to JavaScript</h4>
+                <p>
+                    JavaScript is used to build interactive websites with dynamic features and to validate form data.
+                </p>
+
+                <a href="./Practical5-js.html">Read More</a>
+            </div>
+            <div class="rec">
+                <img src="../Images/bootstrap-logo-vector.png" alt="" />
+                <h4>Introduction to Bootstrap</h4>
+                <p>
+                    Bootstrap is the most popular HTML, CSS, and JavaScript framework for developing responsive, mobile-first websites.
+                </p>
+
+                <a href="./Practicalbs.html">Read More</a>
+            </div>
+        </div>
+        <a name="contact"></a>
+        <h1>Contact</h1>
+        <div id="foot">
+           <p>Website Template for Practical 8 &copy; 2021
+                </br>
+            </br>
+            <a href="#top"> Back to Top</a>
+                </p>
+        </div>
+    </div>
+</body>
+
+</html>
