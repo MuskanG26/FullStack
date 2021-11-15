@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+    <style>
+        body
+        {
+            background-color: grey;
+        }
+        h1{
+            text-align: center;
+            color: snow;
+        }
+        .container {
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        height: 100%;
+        text-align: center;
+        }
+        button {
+        width: 90px;
+        height: 60px;
+        font-size: 30px;
+        color: black;
+        background-color: yellow;
+}
+        button:hover {
+        color: grey;
+        }
+    </style>
+</head>
+<body>
+    <h1>COUNTER</h1>
+    <div class="container">            
+            <button onclick="decrement()">-</button>
+            <h2 id="counting"></h2>
+            <button onclick="increment()">+</button>         
+        </div>
+    
+</body>
+</html>
